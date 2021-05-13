@@ -60,7 +60,7 @@ func (s *Server) Update(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) Start() error {
-	connStr := "user=uraulasevic password=postgres dbname=gotest sslmode=disable"
+	connStr := "host=pg-docker user=postgres password=docker dbname=test sslmode=disable"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		return err
